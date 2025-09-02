@@ -1,0 +1,213 @@
+/* Reset & Base Styles */
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #1abc9c;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: 36px;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Navigation Menu */
+#block-icecream-theme-main-menu ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+  padding: 0;
+}
+
+#block-icecream-theme-main-menu ul li {
+  background: #fff;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1abc9c;
+  border: 2px solid #1abc9c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#block-icecream-theme-main-menu ul li:hover {
+  background: #1abc9c;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Main Content */
+.main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.content {
+  width: 70%;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 25%;
+  background: #f2f9f8;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer */
+.footer {
+  background: #13171c;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#block-icecream-theme-footer ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+#block-icecream-theme-footer ul li a {
+  color: #efefef;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+#block-icecream-theme-footer ul li a:hover {
+  color: #1abc9c;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1abc9c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.node-title a {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1abc9c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.node-title a:hover {
+  color: #16a085;
+}
+
+/* Main wrapper should arrange content + sidebar */
+.main {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  gap: 20px; /* space between content & sidebar */
+}
+
+/* Content area */
+.content {
+  flex: 3; /* takes ~75% */
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Sidebar area */
+.sidebar {
+  flex: 1; /* takes ~25% */
+  background: #f2f9f8;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar blocks */
+.sidebar .block {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar headings */
+.sidebar .block h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1abc9c;
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.sidebar a:hover {
+  color: #1abc9c;
+}
+
+/* Make images responsive */
+.content img,
+.sidebar img,
+article img {
+  max-width: 100%; /* never exceed container width */
+  height: auto; /* maintain aspect ratio */
+  display: block; /* removes inline gaps */
+  margin: 0 auto; /* center images */
+  border-radius: 10px; /* optional: soft rounded edges */
+}
+
+/* Responsive: stack sidebar under content */
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+  .content,
+  .sidebar {
+    width: 100%;
+  }
+}
