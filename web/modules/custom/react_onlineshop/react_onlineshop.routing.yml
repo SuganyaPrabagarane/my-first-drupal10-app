@@ -1,0 +1,7 @@
+react_onlineshop.page:
+  path: '/products'
+  defaults:
+    _controller: '\Drupal\react_onlineshop\Controller\ReactOnlineShopController::products'
+    _title: "React_Onlineshop module"
+  requirements:
+    _permission: "access content"
